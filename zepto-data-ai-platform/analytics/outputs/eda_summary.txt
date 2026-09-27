@@ -1,0 +1,63 @@
+TITANIC DATASET - EDA SUMMARY
+==================================================
+
+Original shape: (891, 15)
+Cleaned shape: (889, 14)
+
+Missing values before cleaning:
+             Missing_Count  Missing_Percentage
+survived                 0                0.00
+pclass                   0                0.00
+sex                      0                0.00
+age                    177               19.87
+sibsp                    0                0.00
+parch                    0                0.00
+fare                     0                0.00
+embarked                 2                0.22
+class                    0                0.00
+who                      0                0.00
+adult_male               0                0.00
+deck                   688               77.22
+embark_town              2                0.22
+alive                    0                0.00
+alone                    0                0.00
+
+Age outlier count: 65
+Fare outlier count: 114
+Fare mean: 32.0967
+Fare median: 14.4542
+Fare mode: 8.0500
+Fare skew direction: Right-skewed
+
+Survival rate by sex:
+sex
+female    74.04
+male      18.89
+
+Survival rate by passenger class:
+pclass
+1    62.62
+2    47.28
+3    24.24
+
+Survival rate by sex and passenger class:
+sex     pclass
+female  1         96.74
+        2         92.11
+        3         50.00
+male    1         36.89
+        2         15.74
+        3         13.54
+
+Correlation matrix:
+          survived  pclass    age  sibsp  parch   fare
+survived     1.000  -0.336 -0.070 -0.034  0.083  0.255
+pclass      -0.336   1.000 -0.337  0.082  0.017 -0.548
+age         -0.070  -0.337  1.000 -0.233 -0.171  0.094
+sibsp       -0.034   0.082 -0.233  1.000  0.415  0.161
+parch        0.083   0.017 -0.171  0.415  1.000  0.218
+fare         0.255  -0.548  0.094  0.161  0.218  1.000
+
+Top two absolute correlations:
+pclass <-> fare = -0.548
+sibsp <-> parch = 0.415

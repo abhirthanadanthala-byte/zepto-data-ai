@@ -1,0 +1,16 @@
+Classification model comparison:
+
+The Random Forest produced an F1 score of
+0.7344 and a ROC-AUC of
+0.8373 on the held-out test set.
+
+Accuracy was 0.8101, while precision
+was 0.7966 and recall was
+0.6812.
+
+The final Random Forest was also evaluated using its out-of-bag
+score, which was 0.8104.
+
+For the regression task, the fare prediction model obtained an
+MAE of 18.8702, RMSE of 30.9202, R² of 0.3822, and
+Adjusted R² of 0.3375.

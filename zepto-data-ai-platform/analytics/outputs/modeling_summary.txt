@@ -1,0 +1,51 @@
+
+MODULE 2 - MACHINE LEARNING SUMMARY
+====================================
+
+Dataset:
+Titanic dataset loaded from analytics/titanic.csv
+
+Classification target:
+survived
+
+Classification features:
+['pclass', 'age', 'sibsp', 'parch', 'fare', 'sex', 'embarked', 'class']
+
+Train/test split:
+80/20 stratified split
+
+Models:
+1. Logistic Regression
+2. Decision Tree
+3. Random Forest
+
+Classification metrics:
+              model  accuracy  precision   recall       f1  roc_auc
+Logistic Regression  0.804469   0.793103 0.666667 0.724409 0.843874
+      Decision Tree  0.765363   0.754717 0.579710 0.655738 0.797101
+      Random Forest  0.810056   0.796610 0.681159 0.734375 0.837286
+
+Random Forest GridSearchCV:
+Best parameters:
+{'classifier__max_depth': 10, 'classifier__max_features': 'sqrt', 'classifier__n_estimators': 100}
+
+Best CV F1:
+0.7366
+
+Final Random Forest OOB score:
+0.8104
+
+Regression target:
+fare
+
+Regression metrics:
+MAE = 18.8702
+RMSE = 30.9202
+R2 = 0.3822
+Adjusted R2 = 0.3375
+
+Heteroscedasticity:
+There is some evidence of heteroscedasticity because the magnitude of residuals changes with predicted fare.
+
+Saved model:
+C:\Users\danth\OneDrive\Desktop\zepto-data-ai-platform\analytics\outputs\best_rf_pipeline.joblib
